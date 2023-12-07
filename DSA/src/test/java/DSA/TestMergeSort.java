@@ -1,3 +1,5 @@
+package DSA;
+
 import DSA.MergeSort;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
