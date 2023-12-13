@@ -1,5 +1,6 @@
-package DSA;
+package DSA.sorting;
 
+import DSA.sorting.QuickSort;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

@@ -1,6 +1,6 @@
-package DSA;
+package DSA.sorting;
 
-import DSA.MergeSort;
+import DSA.sorting.MergeSort;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class TestMergeSort {
