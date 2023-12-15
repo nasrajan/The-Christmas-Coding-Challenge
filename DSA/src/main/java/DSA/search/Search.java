@@ -31,26 +31,49 @@ public class Search {
         return null;
     }
 
-    void createBinarySearchTree(int[] nums) {
+    Node createBinarySearchTree(int[] nums) {
         for(int n: nums) {
             insert(n);
         }
+        return root;
     }
 
-    private void insert(int n) {
+    private Node insert(int n) {
         if (root == null) {
             root = new Node(n);
+            return root;
         }
+
         Node node = root;
-        while(node != null) {
-            if(n < node.value) {
+        while(node != null ) {
+            if(n < node.value && node.left == null) {
+                node.left = new Node(n);
+               break;
+            } else if (node.left != null) {
                 node = node.left;
+            }
+            if(n > node.value && node.right == null) {
+                node.right = new Node(n);
+                break;
+            } else if (node.right != null) {
+                node = node.right;
             }
         }
 
+        return root;
     }
 
-    private class Node {
+    void inOrderTraverse(Node root) {
+        if(root.left != null) {
+            inOrderTraverse(root.left);
+        }
+        System.out.println(root.value);
+        if(root.right != null) {
+            inOrderTraverse(root.right);
+        }
+    }
+
+     class Node {
         int value;
         Node left;
         Node right;

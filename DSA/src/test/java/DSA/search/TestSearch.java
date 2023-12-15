@@ -30,4 +30,13 @@ public class TestSearch {
         int found = Search.binarySearch(nums, 8);
         assertEquals(-1, found);
     }
+
+    @Test
+    void testInsertToBinarySearchTree() {
+        Search search = new Search();
+        int[] nums = new int[] {5, 6, 1, 2, 7, 3, 4};
+        Search.Node root = search.createBinarySearchTree(nums);
+        assertEquals(5, root.value);
+        search.inOrderTraverse(root);
+    }
 }
